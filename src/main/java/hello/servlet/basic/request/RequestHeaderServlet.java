@@ -20,7 +20,7 @@ public class RequestHeaderServlet extends HttpServlet {
 		printHeaderUtils(request);
 	}
 
-	// start line Á¤º¸
+	// start line ï¿½ï¿½ï¿½ï¿½
 	private void printStartLine(HttpServletRequest request) {
 		System.out.println("--- REQUEST-LINE - start ---");
 		System.out.println("request.getMethod() = " + request.getMethod()); // GET
@@ -32,12 +32,12 @@ public class RequestHeaderServlet extends HttpServlet {
 		System.out.println("request.getRequestURI() = " + request.getRequestURI());
 		// username=hi
 		System.out.println("request.getQueryString() = " + request.getQueryString());
-		System.out.println("request.isSecure() = " + request.isSecure()); // https »ç¿ë À¯¹«
+		System.out.println("request.isSecure() = " + request.isSecure()); // https ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		System.out.println("--- REQUEST-LINE - end ---");
 		System.out.println();
 	}
 
-	// Header ¸ðµç Á¤º¸
+	// Header ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	private void printHeaders(HttpServletRequest request) {
 		System.out.println("--- Headers - start ---");
 		/*
@@ -46,35 +46,35 @@ public class RequestHeaderServlet extends HttpServlet {
 		 * headerNames.nextElement(); System.out.println(headerName + ": " +
 		 * request.getHeader(headerName)); }
 		 */
-		request.getHeaderNames().asIterator()
-				.forEachRemaining(headerName -> System.out.println(headerName + ":" + request.getHeader(headerName)));
+//		request.getHeaderNames().asIterator()
+//				.forEachRemaining(headerName -> System.out.println(headerName + ":" + request.getHeader(headerName)));
 		System.out.println("--- Headers - end ---");
 		System.out.println();
 	}
 
-	// Header Æí¸®ÇÑ Á¶È¸
+	// Header ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸
 	private void printHeaderUtils(HttpServletRequest request) {
-		System.out.println("--- Header ÆíÀÇ Á¶È¸ start ---");
-		System.out.println("[Host ÆíÀÇ Á¶È¸]");
-		System.out.println("request.getServerName() = " + request.getServerName()); // Host Çì´õ
-		System.out.println("request.getServerPort() = " + request.getServerPort()); // Host Çì´õ
+		System.out.println("--- Header ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ start ---");
+		System.out.println("[Host ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸]");
+		System.out.println("request.getServerName() = " + request.getServerName()); // Host ï¿½ï¿½ï¿½
+		System.out.println("request.getServerPort() = " + request.getServerPort()); // Host ï¿½ï¿½ï¿½
 		System.out.println();
-		System.out.println("[Accept-Language ÆíÀÇ Á¶È¸]");
-		request.getLocales().asIterator().forEachRemaining(locale -> System.out.println("locale = " + locale));
+		System.out.println("[Accept-Language ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸]");
+//		request.getLocales().asIterator().forEachRemaining(locale -> System.out.println("locale = " + locale));
 		System.out.println("request.getLocale() = " + request.getLocale());
 		System.out.println();
-		System.out.println("[cookie ÆíÀÇ Á¶È¸]");
+		System.out.println("[cookie ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸]");
 		if (request.getCookies() != null) {
 			for (Cookie cookie : request.getCookies()) {
 				System.out.println(cookie.getName() + ": " + cookie.getValue());
 			}
 		}
 		System.out.println();
-		System.out.println("[Content ÆíÀÇ Á¶È¸]");
+		System.out.println("[Content ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸]");
 		System.out.println("request.getContentType() = " + request.getContentType());
 		System.out.println("request.getContentLength() = " + request.getContentLength());
 		System.out.println("request.getCharacterEncoding() = " + request.getCharacterEncoding());
-		System.out.println("--- Header ÆíÀÇ Á¶È¸ end ---");
+		System.out.println("--- Header ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ end ---");
 		System.out.println();
 	}
 
