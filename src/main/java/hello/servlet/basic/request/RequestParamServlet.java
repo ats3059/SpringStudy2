@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//1.ÆÄ¶ó¹ÌÅÍ Àü¼Û ±â´É
+//1.ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 //http://localhost:8080/request-param?username=hello&age=20
 @WebServlet(name = "requestParamServlet", urlPatterns = "/request-param")
 public class RequestParamServlet extends HttpServlet {
@@ -17,13 +17,13 @@ public class RequestParamServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse resopnse)
 			throws ServletException, IOException {
 
-		System.out.println("[ÀüÃ¼ ÆÄ¸®¹ÌÅÍ Á¶È¸] -start");
+		System.out.println("[ï¿½ï¿½Ã¼ ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸] -start");
 		request.getParameterNames().asIterator()
 				.forEachRemaining(paramname -> System.out.println("paramName : " + request.getParameter(paramname)));
 
-		System.out.println("[ÀüÃ¼ ÆÄ¸®¹ÌÅÍ Á¶È¸] - end");
+		System.out.println("[ï¿½ï¿½Ã¼ ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸] - end");
 		System.out.println();
-		System.out.println("[´ÜÀÏ ÆÄ¶ó¹ÌÅÍ Á¶È¸]");
+		System.out.println("[ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸]");
 		String username = request.getParameter("username");
 		String age = request.getParameter("age");
 
@@ -32,7 +32,7 @@ public class RequestParamServlet extends HttpServlet {
 		System.out.println();
 
 		System.out.println();
-		System.out.println("[ÀÌ¸§ÀÌ °°Àº º¹¼ö ÆÄ¶ó¹ÌÅÍ Á¶È¸]");
+		System.out.println("[ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸]");
 		System.out.println("request.getParameterValues(username)");
 		String[] usernames = request.getParameterValues("username");
 
